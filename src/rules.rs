@@ -111,6 +111,9 @@ pub enum MatchSpec {
     },
     ContainerOle,
     BytecodeDanger,
+    CodeSignal {
+        signal: String,
+    },
 }
 
 #[derive(Debug, Clone)]

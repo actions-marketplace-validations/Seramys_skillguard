@@ -2,7 +2,7 @@
 
 Python entry point for [SkillGuard](https://github.com/Seramys/skillguard).
 
-> 0.2.0 publishes per-platform wheels: win_amd64, manylinux_2_17_x86_64, and macOS arm64/universal2.
+> 0.3.0 publishes per-platform wheels: win_amd64, manylinux_2_17_x86_64, and macOS arm64/universal2.
 
 ```bash
 pip install seramys-skillguard

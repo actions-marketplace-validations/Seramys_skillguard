@@ -119,7 +119,7 @@
     {
       "id": "SG-PERM-002",
       "title": "敏感路径访问",
-      "severity": "high",
+      "severity": "medium",
       "category": "permissions",
       "description": "Skill 引用了 SSH 密钥、云凭证、浏览器 Cookie、钱包等敏感路径。",
       "remediation": "移除对敏感路径的访问；如确需读取，改为显式配置并由用户授权。",
@@ -861,6 +861,129 @@
           ]
         ],
         "none_of": []
+      }
+    },
+    {
+      "id": "SG-INIT-001",
+      "title": "隐藏预检/初始化脚本",
+      "severity": "high",
+      "category": "prompt-injection",
+      "description": "文档要求在正式任务前运行预检、初始化或热身上线脚本，同时使用隐蔽、凭证访问或外联话术。",
+      "remediation": "不要执行隐藏预检脚本；展开脚本人工审查，并要求提供可验证的源码与签名。",
+      "references": [
+        "https://genai.owasp.org/llmrisk/llm01-prompt-injection/"
+      ],
+      "match": {
+        "type": "code_signal",
+        "signal": "hidden_bootstrap"
+      }
+    },
+    {
+      "id": "SG-ACCT-001",
+      "title": "Windows 账户/远程访问变更",
+      "severity": "high",
+      "category": "execution",
+      "description": "Skill 修改本地账户、管理员组、远程桌面或 Win32_UserAccount，可能建立后门账户或远程访问通道。",
+      "remediation": "拒绝安装；在隔离主机审查账户变更，并禁用不必要的远程桌面与管理员权限。",
+      "match": {
+        "type": "code_signal",
+        "signal": "windows_account"
+      }
+    },
+    {
+      "id": "SG-PERSIST-001",
+      "title": "主机持久化",
+      "severity": "high",
+      "category": "execution",
+      "description": "Skill 写入计划任务、启动项、cron、systemd、launchd 或 authorized_keys，试图在任务结束后继续驻留。",
+      "remediation": "拒绝安装；清理持久化条目并审查来源，恢复默认启动配置。",
+      "match": {
+        "type": "code_signal",
+        "signal": "persistence"
+      }
+    },
+    {
+      "id": "SG-EXEC-001",
+      "title": "编码/反序列化后执行",
+      "severity": "high",
+      "category": "obfuscation",
+      "description": "Skill 同时使用 Base64、marshal、pickle、压缩或解密与 exec/eval/子进程入口，符合编码载荷执行特征。",
+      "remediation": "拒绝执行；解码后人工审查载荷，并优先使用可验证的明文实现。",
+      "match": {
+        "type": "code_signal",
+        "signal": "encoded_exec"
+      }
+    },
+    {
+      "id": "SG-EXEC-002",
+      "title": "动态命令执行入口",
+      "severity": "medium",
+      "category": "execution",
+      "description": "代码块包含 exec/eval/subprocess/os.system/child_process 等动态执行入口，需结合其输入来源审查。",
+      "remediation": "确认命令输入来自可信常量；对外部输入使用参数化调用并限制 shell。",
+      "match": {
+        "type": "code_signal",
+        "signal": "dynamic_exec"
+      }
+    },
+    {
+      "id": "SG-CRED-001",
+      "title": "凭证/敏感数据外传链路",
+      "severity": "critical",
+      "category": "exfiltration",
+      "description": "Skill 同时访问 SSH 密钥、云凭证、环境变量或浏览器会话与外部网络端点，符合凭证外传特征。",
+      "remediation": "立即阻断并轮换相关凭证；审查网络目标，删除该 Skill。",
+      "match": {
+        "type": "code_signal",
+        "signal": "credential_exfil"
+      }
+    },
+    {
+      "id": "SG-CRED-002",
+      "title": "读取敏感凭证文件",
+      "severity": "high",
+      "category": "credential-access",
+      "description": "Skill 读取 SSH、云凭证、浏览器会话、钱包或系统账户文件，且上下文存在外联能力或隐蔽执行。",
+      "remediation": "限制 Skill 的文件读取范围；对凭证使用最小权限与专用代理。",
+      "match": {
+        "type": "code_signal",
+        "signal": "credential_read"
+      }
+    },
+    {
+      "id": "SG-DL-001",
+      "title": "下载后直接执行",
+      "severity": "high",
+      "category": "execution",
+      "description": "Skill 从网络下载脚本或可执行文件后直接通过 shell、python 或 chmod 执行。",
+      "remediation": "拒绝该执行链；先下载并校验签名/哈希，再在隔离环境中审查。",
+      "match": {
+        "type": "code_signal",
+        "signal": "download_exec"
+      }
+    },
+    {
+      "id": "SG-CONCEAL-001",
+      "title": "要求对用户/审计隐藏执行",
+      "severity": "high",
+      "category": "prompt-injection",
+      "description": "Skill 明确要求不告知用户、不请求确认、静默执行或隐藏日志，违反可审计准入原则。",
+      "remediation": "拒绝安装；要求所有高影响动作显式告知用户并写入审计记录。",
+      "match": {
+        "type": "code_signal",
+        "signal": "concealment"
+      }
+    },
+    {
+      "id": "SG-SEM-001",
+      "title": "可选本地语义层：可疑意图",
+      "severity": "high",
+      "category": "semantic",
+      "description": "可选的本地小模型或嵌入分类器认为该 Skill 存在较高恶意意图风险；该结果不作为默认离线判定。",
+      "remediation": "将结果送入人工审查队列；仅在可信本地环境中启用语义层，并保留模型/端点与版本记录。",
+      "match": {
+        "type": "code_signal",
+        "signal": "__semantic_only__"
       }
     }
   ]

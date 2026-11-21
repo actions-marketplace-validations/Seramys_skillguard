@@ -7,9 +7,13 @@ This directory keeps the detection-quality gate reproducible. A hit is not a saf
 | Suite | CI | Composition | Current result |
 | --- | --- | --- | --- |
 | Public smoke | yes | 27 base fixtures + 320 generated malicious + 520 generated benign | 335 / 532; recall 100%, FPR 0% |
-| Extended holdout | no | generated `holdout` + MaliciousSkillBench + reviewed ClawHub | 202 / 340; recall 64.9%, FPR 1.5% |
+| **holdout-v3 (blind)** | no | frozen from dev after P0–P3 tuning | **212 / 334; recall 77.8%, FPR 3.0%** |
+| holdout-v2 | no | frozen from test; used for precision validation | 212 / 348; recall 75.0%, FPR 2.3% |
+| holdout-v1 (contaminated) | no | previous public holdout | 202 / 340; recall 81.2%, FPR 1.2% |
 
-The public suite is synthetic and deliberately easy. Its 100% recall proves the harness and rules run; it is **not** a quality claim. The extended holdout is the quality signal, but its real samples cannot be redistributed in this repository, so public CI cannot run it.
+The public suite is synthetic and deliberately easy. Its 100% recall proves the harness and rules run; it is **not** a quality claim. The frozen holdouts are the quality signal, but their real samples cannot be redistributed in this repository, so public CI cannot run them.
+
+holdout-v1 was used for previous miss analysis, so it is contaminated. holdout-v2 was inspected during precision tuning and is also not a blind claim anymore. **holdout-v3 was frozen from the untouched dev split and is the current blind quality number.** Do not tune against v3 and then still call it blind; freeze a new split before the next claim.
 
 ## Corpus
 
@@ -42,15 +46,17 @@ Base fixtures use split `base` and are excluded from the holdout number. Cisco a
 
 ## Gate policy
 
+Gate thresholds always come from `manifest.json`; a frozen holdout manifest only supplies samples. `run.py` also derives the reported version from `Cargo.toml` unless `--version` is passed.
+
 `manifest.json` sets:
 
-- `target_fpr: 0.05` and `max_fpr_upper: 0.10` (Wilson upper bound)
-- `min_recall_at_fpr: 0.64` — the honest regression floor, not the product target
-- `target_recall_at_fpr: 0.90` — the aspirational target
-- new false positives vs `fp-baseline.json` fail the gate
+- `target_fpr: 0.03` and `max_fpr_upper: 0.06` (Wilson upper bound)
+- `min_recall_at_fpr: 0.75` — P0 regression floor
+- `target_recall_at_fpr: 0.90` — P2 semantic-layer target
+- new false positives vs `fp-baseline.json` fail the **public smoke** gate; frozen holdouts are judged by FPR/recall
 - per-rule TP/FP and Wilson 95% intervals are reported
 
-At the current operating point (`high+`) the extended holdout passes the regression floor at 64.9% recall and 1.5% FPR. It does **not** meet the 90% target. Most misses are MaliciousSkillBench rewritten malicious prompts; the current rules-only engine is intentionally conservative about semantic intent. Do not present this gate as "90% recall achieved."
+At the current operating point (`high+`) the P0 target is met on the blind holdout-v3: 77.8% recall and 3.0% FPR. It does **not** meet the 90% target; that is the role of the optional semantic layer, not the default deterministic path. Most misses are MaliciousSkillBench rewritten malicious prompts. Do not present this gate as "90% recall achieved."
 
 ## Run
 
@@ -62,9 +68,18 @@ python bench/make_corpus.py          # 320 malicious / 520 benign
 # CI smoke suite (same command as .github/workflows/ci.yml)
 python bench/run.py --exe target/release/skillguard --split all --no-imported
 
-# Extended quality suite (requires local real corpus and imported manifest)
-python bench/run.py --exe target/release/skillguard --split holdout \
-  --imported-manifest bench/imported/manifest.json
+# Freeze holdout-v1/v2/v3 manifests (real sample trees stay local)
+python bench/freeze_holdout.py
+
+# Blind quality suite (requires local authorized sample trees)
+python bench/run.py --exe target/release/skillguard \
+  --manifest bench/imported/holdout-v3.manifest.json \
+  --generated-manifest bench/imported/__none__.json --no-imported --split all
+
+# v1 regression (contaminated) or v2 precision validation
+python bench/run.py --exe target/release/skillguard \
+  --manifest bench/imported/holdout-v1.manifest.json \
+  --generated-manifest bench/imported/__none__.json --no-imported --split all
 ```
 
 Results are written to `bench/results/latest.json`, `latest.md`, and a versioned `v<version>-<date>` report. Raw reports are ignored; committed summaries live in `bench/reports/`.
@@ -73,12 +88,13 @@ Results are written to `bench/results/latest.json`, `latest.md`, and a versioned
 
 | Metric | Result |
 |---|---:|
-| Malicious (extended holdout) | 202 |
-| Benign (extended holdout) | 340 |
-| Recall @ high | 64.9% (131/202) |
-| FPR @ high | 1.5% (5/340) |
-| Recall @ critical | 30.7% (62/202) |
-| FPR @ critical | 0.0% (0/340) |
+| Malicious (holdout-v3 blind) | 212 |
+| Benign (holdout-v3 blind) | 334 |
+| Recall @ high | 77.8% (165/212) |
+| FPR @ high | 3.0% (10/334) |
+| Recall @ critical | 30.2% (64/212) |
+| FPR @ critical | 0.9% (3/334) |
+| holdout-v2 (tuning) | 75.0% / 2.3% |
 | Public smoke recall / FPR | 100% / 0% |
 
 ## P1/P2 scripts
@@ -86,7 +102,7 @@ Results are written to `bench/results/latest.json`, `latest.md`, and a versioned
 - `import_samples.py`: import locally provided, licensed Hub samples; no scraping.
 - `make_adversarial.py`: deterministic quarterly mutations (Base64, zero-width, split, docx).
 - `make_pyc_variants.py`: pyc matrix for the current interpreter.
-- `llm_judge.py`: OpenAI-compatible local endpoint prototype; candidate reranking only, paused.
+- `llm_judge.py`: OpenAI-compatible local endpoint prototype; candidate reranking only, optional.
 - `calibrate.py`: choose threshold on dev, evaluate holdout.
 - `ablation.py`: rules-only vs LLM-only vs combined.
 - `candidates.py`: export medium-only candidates.

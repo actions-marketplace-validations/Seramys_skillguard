@@ -1,6 +1,8 @@
+use crate::codeinsight;
 use crate::frontmatter;
-use crate::model::{Finding, Severity, Skill};
+use crate::model::{Capability, Finding, Severity, Skill};
 use crate::rules::{CompiledRule, MatchSpec, Rule, Scope};
+use crate::semantic::SemanticVerdict;
 use regex::Regex;
 use sha2::{Digest, Sha256};
 use std::collections::HashSet;
@@ -22,6 +24,8 @@ pub struct ScanOptions {
 
 pub struct ScanOutcome {
     pub findings: Vec<Finding>,
+    pub capabilities: Vec<Capability>,
+    pub semantic: Vec<SemanticVerdict>,
     pub skills: Vec<String>,
     pub files: usize,
     pub root: PathBuf,
@@ -74,6 +78,7 @@ pub fn scan(
     let skills = discover_skills(&root, opts)?;
     let base_ignores = load_ignore_file(&root);
     let mut findings = Vec::new();
+    let mut capabilities = Vec::new();
     let mut files = 0usize;
     let mut names = Vec::new();
 
@@ -81,6 +86,7 @@ pub fn scan(
         names.push(skill.name.clone());
         files += skill.files.len();
         findings.extend(scan_skill(skill, rules, opts, &base_ignores)?);
+        capabilities.extend(codeinsight::capabilities(skill));
     }
 
     let mut seen = HashSet::new();
@@ -97,6 +103,8 @@ pub fn scan(
 
     Ok(ScanOutcome {
         findings,
+        capabilities,
+        semantic: Vec::new(),
         skills: names,
         files,
         root,
@@ -482,6 +490,20 @@ fn scan_text_content(
 ) {
     let lines: Vec<&str> = content.lines().collect();
     let suppression = collect_file_suppression(&lines);
+    let code_analysis = if matches!(
+        scope,
+        Scope::SkillMd | Scope::Markdown | Scope::Script | Scope::Text
+    ) && rules
+        .iter()
+        .any(|cr| matches!(&cr.rule.matcher, MatchSpec::CodeSignal { .. }))
+    {
+        Some(codeinsight::analyze(
+            content,
+            matches!(scope, Scope::Script),
+        ))
+    } else {
+        None
+    };
 
     for cr in rules {
         if !rule_text_applies(&cr.rule, scope) {
@@ -527,6 +549,23 @@ fn scan_text_content(
                     opts,
                     out,
                 );
+            }
+            MatchSpec::CodeSignal { signal } => {
+                let Some(analysis) = &code_analysis else {
+                    continue;
+                };
+                for found in analysis.signals.iter().filter(|s| s.id == signal) {
+                    let f = finding_from_rule(
+                        &cr.rule,
+                        skill,
+                        rel,
+                        found.line,
+                        found.column,
+                        found.excerpt.clone(),
+                        found.message.clone(),
+                    );
+                    push_finding(out, f, ignore, opts);
+                }
             }
             MatchSpec::Padding {
                 min_lines,
@@ -1104,7 +1143,7 @@ fn rule_applies_to_skill_md(rule: &Rule) -> bool {
         })
 }
 
-fn scope_for(rel: &str) -> Scope {
+pub(crate) fn scope_for(rel: &str) -> Scope {
     let name = rel.rsplit('/').next().unwrap_or(rel);
     if name.eq_ignore_ascii_case("SKILL.md") {
         return Scope::SkillMd;

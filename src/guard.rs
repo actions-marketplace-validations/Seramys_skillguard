@@ -87,7 +87,7 @@ impl Decision {
     pub fn as_str(self) -> &'static str {
         match self {
             Self::Allow => "ALLOW",
-            Self::Warn => "WARN",
+            Self::Warn => "REVIEW",
             Self::Block => "BLOCK",
         }
     }
@@ -275,6 +275,52 @@ pub fn filter_baseline(findings: Vec<Finding>, baseline: &BTreeSet<String>) -> V
         .into_iter()
         .filter(|finding| !baseline.contains(&fingerprint_finding(finding)))
         .collect()
+}
+
+pub fn merge_policies(policies: &[Policy]) -> Policy {
+    let mut merged = Policy::default();
+    let mut seen_allow = BTreeSet::new();
+    for policy in policies {
+        if !policy.profile.is_empty() {
+            merged.profile = policy.profile.clone();
+        }
+        if policy.fail_on.is_some() {
+            merged.fail_on = policy.fail_on.clone();
+        }
+        if policy.max_medium.is_some() {
+            merged.max_medium = policy.max_medium;
+        }
+        for pattern in &policy.deny {
+            if !merged.deny.contains(pattern) {
+                merged.deny.push(pattern.clone());
+            }
+        }
+        for exception in &policy.allow {
+            let key = (
+                exception.rule.clone(),
+                exception.owner.clone(),
+                exception.reason.clone(),
+                exception.expires.clone(),
+            );
+            if seen_allow.insert(key) {
+                merged.allow.push(exception.clone());
+            }
+        }
+    }
+    merged.deny.sort();
+    merged
+}
+
+pub fn policy_bundle_hash(paths: &[PathBuf]) -> Result<Option<String>, String> {
+    if paths.is_empty() {
+        return Ok(None);
+    }
+    let mut hasher = Sha256::new();
+    for path in paths {
+        hasher.update(file_hash(path)?.as_bytes());
+        hasher.update([0]);
+    }
+    Ok(Some(hex(&hasher.finalize())))
 }
 
 pub fn load_policy(path: &Path) -> Result<Policy, String> {
@@ -513,6 +559,95 @@ pub fn audit_entry(
         tool_version: env!("CARGO_PKG_VERSION").to_string(),
         prev_hash: None,
         entry_hash: None,
+    }
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub struct AuditVerification {
+    pub path: String,
+    pub entries: usize,
+    pub ok: bool,
+    pub errors: Vec<String>,
+}
+
+pub fn verify_audit(path: &Path) -> Result<AuditVerification, String> {
+    let text = fs::read_to_string(path)
+        .map_err(|e| format!("cannot read audit {}: {e}", path.display()))?;
+    let mut previous: Option<String> = None;
+    let mut entries = 0usize;
+    let mut errors = Vec::new();
+    for (index, line) in text.lines().enumerate() {
+        if line.trim().is_empty() {
+            continue;
+        }
+        let entry: AuditEntry = serde_json::from_str(line)
+            .map_err(|e| format!("audit entry {} is invalid JSON: {e}", index + 1))?;
+        entries += 1;
+        if entry.prev_hash != previous {
+            errors.push(format!(
+                "entry {} prev_hash does not match previous entry",
+                index + 1
+            ));
+        }
+        let actual = entry.entry_hash.clone();
+        let mut unsigned = entry.clone();
+        unsigned.entry_hash = None;
+        let body = serde_json::to_string(&unsigned)
+            .map_err(|e| format!("audit serialization failed: {e}"))?;
+        let mut hasher = Sha256::new();
+        hasher.update(body.as_bytes());
+        let expected = hex(&hasher.finalize());
+        if actual.as_deref() != Some(expected.as_str()) {
+            errors.push(format!("entry {} hash mismatch", index + 1));
+        }
+        previous = actual;
+    }
+    Ok(AuditVerification {
+        path: path.display().to_string(),
+        entries,
+        ok: errors.is_empty(),
+        errors,
+    })
+}
+
+pub fn export_audit(path: &Path, format: &str) -> Result<String, String> {
+    let text = fs::read_to_string(path)
+        .map_err(|e| format!("cannot read audit {}: {e}", path.display()))?;
+    let entries: Vec<AuditEntry> = text
+        .lines()
+        .filter(|line| !line.trim().is_empty())
+        .map(serde_json::from_str)
+        .collect::<Result<_, _>>()
+        .map_err(|e| format!("audit entry is invalid JSON: {e}"))?;
+    if format == "csv" {
+        let mut out = String::from(
+            "timestamp_unix,action,subject,decision,total,critical,high,medium,low,entry_hash\n",
+        );
+        for entry in entries {
+            out.push_str(&format!(
+                "{},{},{},{},{},{},{},{},{},{}\n",
+                entry.timestamp_unix,
+                csv_field(&entry.action),
+                csv_field(&entry.subject),
+                csv_field(&entry.decision),
+                entry.findings.total,
+                entry.findings.critical,
+                entry.findings.high,
+                entry.findings.medium,
+                entry.findings.low,
+                entry.entry_hash.unwrap_or_default()
+            ));
+        }
+        return Ok(out);
+    }
+    serde_json::to_string_pretty(&entries).map_err(|e| format!("audit serialization failed: {e}"))
+}
+
+fn csv_field(value: &str) -> String {
+    if value.contains(',') || value.contains('"') || value.contains('\n') {
+        format!("\"{}\"", value.replace('"', "\"\""))
+    } else {
+        value.to_string()
     }
 }
 

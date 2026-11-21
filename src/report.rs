@@ -115,6 +115,135 @@ pub fn print_text(
     failed(&s, threshold)
 }
 
+pub fn print_review(
+    outcome: &ScanOutcome,
+    version: &str,
+    decision: Option<&str>,
+    reasons: &[String],
+    detailed: bool,
+    color: bool,
+    quiet: bool,
+) {
+    let s = summary(outcome);
+    let mut out = String::new();
+    if !quiet {
+        out.push_str(&format!(
+            "SkillGuard {}  |  {}\n",
+            version,
+            if detailed { "explain" } else { "review" }
+        ));
+        out.push_str(&format!(
+            "root: {}\nscanned {} skill(s), {} file(s)\n",
+            display_root(&outcome.root),
+            s.skills,
+            s.files
+        ));
+        if let Some(decision) = decision {
+            out.push_str(&format!("admission: {decision}"));
+            if !reasons.is_empty() {
+                out.push_str(&format!(" — {}", reasons.join("; ")));
+            }
+            out.push('\n');
+        }
+        out.push('\n');
+    }
+
+    if !outcome.capabilities.is_empty() {
+        out.push_str("Capability evidence\n");
+        for cap in &outcome.capabilities {
+            let source = if cap.declared { "declared" } else { "observed" };
+            out.push_str(&format!(
+                "  [{}] {} -> {}  ({}:{})\n",
+                source, cap.kind, cap.target, cap.file, cap.line
+            ));
+            if detailed {
+                out.push_str(&format!("      evidence: {}\n", cap.evidence));
+            }
+        }
+        out.push('\n');
+    }
+
+    if outcome.findings.is_empty() {
+        out.push_str("No findings.\n");
+    } else {
+        out.push_str("Review candidates\n");
+        for f in &outcome.findings {
+            let label = if color {
+                format!(
+                    "{}{}\x1b[0m",
+                    f.severity.ansi(),
+                    f.severity.as_str().to_uppercase()
+                )
+            } else {
+                f.severity.as_str().to_uppercase()
+            };
+            out.push_str(&format!(
+                "  [{}] {}  {}  ({}:{})\n",
+                label, f.rule_id, f.title, f.file, f.line
+            ));
+            if detailed {
+                if !f.excerpt.is_empty() {
+                    out.push_str(&format!("      excerpt: {}\n", f.excerpt));
+                }
+                if !f.message.is_empty() {
+                    out.push_str(&format!("      why: {}\n", f.message));
+                }
+                if !f.remediation.is_empty() {
+                    out.push_str(&format!("      fix: {}\n", f.remediation));
+                }
+                if !f.references.is_empty() {
+                    out.push_str(&format!("      ref: {}\n", f.references.join(", ")));
+                }
+            }
+        }
+        out.push('\n');
+    }
+
+    if !quiet {
+        out.push_str(&format!(
+            "{} finding(s): critical {} | high {} | medium {} | low {}\n",
+            s.total, s.critical, s.high, s.medium, s.low
+        ));
+    }
+    print!("{out}");
+    let _ = io::stdout().flush();
+}
+
+pub fn evidence_graph(outcome: &ScanOutcome) -> Value {
+    let mut nodes: Vec<Value> = Vec::new();
+    let mut edges: Vec<Value> = Vec::new();
+    let mut seen_nodes = BTreeSet::new();
+    for skill in &outcome.skills {
+        let id = format!("skill:{skill}");
+        if seen_nodes.insert(id.clone()) {
+            nodes.push(json!({"id": id, "type": "skill", "label": skill}));
+        }
+    }
+    for cap in &outcome.capabilities {
+        let id = format!(
+            "capability:{}:{}:{}:{}",
+            cap.skill, cap.kind, cap.target, cap.file
+        );
+        if seen_nodes.insert(id.clone()) {
+            nodes.push(json!({
+                "id": id,
+                "type": cap.kind,
+                "label": cap.target,
+                "declared": cap.declared,
+                "file": cap.file,
+                "line": cap.line,
+                "evidence": cap.evidence
+            }));
+        }
+        edges.push(json!({
+            "from": format!("skill:{}", cap.skill),
+            "to": id,
+            "relation": if cap.declared { "declares" } else { "observes" }
+        }));
+    }
+    json!({"nodes": nodes, "edges": edges})
+}
+
 pub fn to_json(outcome: &ScanOutcome, version: &str, pretty: bool) -> String {
     let s = summary(outcome);
     let doc = json!({
@@ -123,12 +252,43 @@ pub fn to_json(outcome: &ScanOutcome, version: &str, pretty: bool) -> String {
         "root": display_root(&outcome.root),
         "summary": &s,
         "findings": &outcome.findings,
+        "capabilities": &outcome.capabilities,
+        "evidence_graph": evidence_graph(outcome),
+        "semantic": &outcome.semantic,
     });
     if pretty {
         serde_json::to_string_pretty(&doc).unwrap_or_default()
     } else {
         serde_json::to_string(&doc).unwrap_or_default()
     }
+}
+
+pub fn to_github(outcome: &ScanOutcome) -> String {
+    let mut out = String::new();
+    for f in &outcome.findings {
+        let level = match f.severity {
+            Severity::Critical | Severity::High => "error",
+            Severity::Medium => "warning",
+            Severity::Low => "notice",
+        };
+        let message = if f.message.is_empty() {
+            f.title.clone()
+        } else {
+            format!("{}: {}", f.title, f.message)
+        };
+        out.push_str(&format!(
+            "::{level} file={},line={},col={}::{} {}\n",
+            f.file.replace('%', "%25").replace('\n', "%0A"),
+            f.line,
+            f.column,
+            f.rule_id,
+            message
+                .replace('%', "%25")
+                .replace('\r', "%0D")
+                .replace('\n', "%0A")
+        ));
+    }
+    out
 }
 
 pub fn to_sarif(outcome: &ScanOutcome, version: &str, rules: &[CompiledRule]) -> String {

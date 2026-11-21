@@ -20,7 +20,8 @@ __pycache__/
 /bench/samples/adversarial/
 /bench/samples/pyc-matrix/
 /bench/samples/real/
-/bench/imported/
+/bench/imported/*
+!/bench/imported/holdout-v*.manifest.json
 /bench/results/
 # raw reports can embed sample metadata; commit summaries and Markdown only
 /bench/reports/*.json

@@ -1,3 +1,4 @@
+mod codeinsight;
 mod config;
 mod engine;
 mod frontmatter;
@@ -7,6 +8,8 @@ mod model;
 mod pyc;
 mod report;
 mod rules;
+mod runtime;
+mod semantic;
 
 use engine::ScanOptions;
 use model::Severity;
@@ -27,6 +30,8 @@ const BOOL_FLAGS: &[&str] = &[
     "yes",
     "dry-run",
     "keep-quarantine",
+    "semantic",
+    "once",
     "help",
 ];
 
@@ -43,9 +48,15 @@ fn run() -> i32 {
     let rest = &args[1..];
     let result = match command {
         "scan" => cmd_scan(rest),
+        "review" => cmd_scan(&with_format(rest, "review")),
+        "explain" => cmd_scan(&with_format(rest, "explain")),
         "lock" => cmd_lock(rest),
         "install" => cmd_install(rest),
         "verify" => cmd_verify(rest),
+        "semantic" => cmd_semantic(rest),
+        "admit" => cmd_admit(rest),
+        "gateway" => cmd_gateway(rest),
+        "audit" => cmd_audit(rest),
         "policy" => cmd_policy(rest),
         "rules" => cmd_rules(rest),
         "init" => cmd_init(rest),
@@ -76,9 +87,18 @@ fn print_help() {
 
 Usage:
   skillguard scan <path> [options]
+  skillguard review <path> [options]       Human review queue + capability evidence
+  skillguard explain <path> [options]      Review queue with excerpts and remediation
+  skillguard semantic check <path> [options]
+  skillguard semantic embed <text> [options]
+  skillguard admit [--policy file] [--audit file]       JSONL tool-call admission on stdin
+  skillguard gateway [--bind 127.0.0.1:8787] [--once]   Local HTTP admission gateway
+  skillguard audit verify <audit.jsonl>
+  skillguard audit export <audit.jsonl> [--format json|csv]
   skillguard lock <path> [--output skillguard.lock]
   skillguard verify <path> [--lock skillguard.lock]
   skillguard policy validate <file.json>
+  skillguard policy merge <base.json> <overlay.json> [--output file]
   skillguard install <source> [options]   (experimental: P1 install rail)
   skillguard rules list
   skillguard rules validate <file.json|dir>
@@ -86,7 +106,8 @@ Usage:
   skillguard version
 
 Scan options:
-  --format text|json|sarif       Output format (default: text)
+  --format text|json|sarif|github|review|explain
+                                 Output format (default: text)
   --fail-on none|low|medium|high|critical
                                  Exit 1 when a finding reaches this severity (default: high)
   --min-severity low|medium|high|critical
@@ -103,6 +124,17 @@ Scan options:
   --no-color                     Disable ANSI colors
   --quiet                        Hide header and summary
   --json-pretty                  Pretty-print JSON output
+
+Semantic options (optional; no model is bundled and no network is used by default):
+  --semantic                     Enable the configured local/remote model layer
+  --semantic-provider <name>     ollama | openai | custom (default: ollama)
+  --semantic-endpoint <url>      OpenAI-compatible base URL
+  --semantic-model <name>        Chat model (e.g. qwen2.5:3b-instruct-q4_K_M)
+  --embedding-endpoint <url>     OpenAI-compatible embedding base URL
+  --embedding-model <name>       Embedding model (e.g. bge-m3)
+  --api-key-env <var>            Read the API key from this environment variable
+  --semantic-timeout <secs>      Request timeout (default: 60)
+  --min-risk <0-100>             Minimum semantic risk to emit a finding (default: 70)
 
 Lock / verify options:
   --output <file>                Lockfile path (default: skillguard.lock)
@@ -151,6 +183,13 @@ impl ParsedArgs {
     fn all(&self, key: &str) -> Vec<String> {
         self.flags.get(key).cloned().unwrap_or_default()
     }
+}
+
+fn with_format(args: &[String], format: &str) -> Vec<String> {
+    let mut out = args.to_vec();
+    out.push("--format".to_string());
+    out.push(format.to_string());
+    out
 }
 
 fn parse_args(args: &[String], known: &[&str]) -> Result<ParsedArgs, String> {
@@ -277,6 +316,51 @@ fn cmd_lock(args: &[String]) -> Result<i32, String> {
     Ok(0)
 }
 
+fn cmd_audit(args: &[String]) -> Result<i32, String> {
+    let subcommand = args.first().map(String::as_str).unwrap_or("verify");
+    let rest = &args[1..];
+    let parsed = parse_args(rest, &["format", "json", "help"])?;
+    if parsed.has("help") {
+        print_help();
+        return Ok(0);
+    }
+    let Some(path) = parsed.positional.first() else {
+        return Err(format!(
+            "usage: skillguard audit {subcommand} <audit.jsonl>"
+        ));
+    };
+    let path = Path::new(path);
+    match subcommand {
+        "verify" => {
+            let result = guard::verify_audit(path)?;
+            if parsed.has("json") {
+                println!(
+                    "{}",
+                    serde_json::to_string_pretty(&result)
+                        .map_err(|error| format!("cannot serialize audit verification: {error}"))?
+                );
+            } else if result.ok {
+                println!("OK: {} audit entries, hash chain valid", result.entries);
+            } else {
+                println!("FAIL: {} audit entries", result.entries);
+                for error in &result.errors {
+                    println!("  {error}");
+                }
+            }
+            Ok(if result.ok { 0 } else { 1 })
+        }
+        "export" => {
+            let format = parsed.one("format").unwrap_or("json");
+            if !matches!(format, "json" | "csv") {
+                return Err(format!("invalid audit export format: {format}"));
+            }
+            print!("{}", guard::export_audit(path, format)?);
+            Ok(0)
+        }
+        other => Err(format!("unknown audit subcommand: {other}")),
+    }
+}
+
 fn cmd_policy(args: &[String]) -> Result<i32, String> {
     let subcommand = args.first().map(String::as_str).unwrap_or("validate");
     match subcommand {
@@ -302,8 +386,200 @@ fn cmd_policy(args: &[String]) -> Result<i32, String> {
             );
             Ok(0)
         }
+        "merge" => {
+            let parsed = parse_args(&args[1..], &["output", "json", "help"])?;
+            if parsed.has("help") {
+                print_help();
+                return Ok(0);
+            }
+            if parsed.positional.is_empty() {
+                return Err(
+                    "usage: skillguard policy merge <base.json> <overlay.json> [--output file]"
+                        .into(),
+                );
+            }
+            let policies = parsed
+                .positional
+                .iter()
+                .map(|path| guard::load_policy(Path::new(path)))
+                .collect::<Result<Vec<_>, _>>()?;
+            let merged = guard::merge_policies(&policies);
+            let body = serde_json::to_string_pretty(&merged)
+                .map_err(|error| format!("cannot serialize merged policy: {error}"))?;
+            match parsed.one("output") {
+                Some(path) => {
+                    fs::write(path, format!("{body}\n"))
+                        .map_err(|error| format!("cannot write {path}: {error}"))?;
+                }
+                None => println!("{body}"),
+            }
+            Ok(0)
+        }
         other => Err(format!("unknown policy subcommand: {other}")),
     }
+}
+
+fn apply_semantic_overrides(
+    cfg: &mut semantic::SemanticConfig,
+    parsed: &ParsedArgs,
+) -> Result<(), String> {
+    if let Some(value) = parsed.one("semantic-provider") {
+        cfg.provider = Some(value.to_string());
+    }
+    if let Some(value) = parsed.one("semantic-endpoint") {
+        cfg.endpoint = Some(value.to_string());
+    }
+    if let Some(value) = parsed.one("semantic-model") {
+        cfg.model = Some(value.to_string());
+    }
+    if let Some(value) = parsed.one("embedding-endpoint") {
+        cfg.embedding_endpoint = Some(value.to_string());
+    }
+    if let Some(value) = parsed.one("embedding-model") {
+        cfg.embedding_model = Some(value.to_string());
+    }
+    if let Some(value) = parsed.one("api-key-env") {
+        cfg.api_key_env = Some(value.to_string());
+    }
+    if let Some(value) = parsed.one("semantic-timeout") {
+        cfg.timeout_secs = Some(
+            value
+                .parse()
+                .map_err(|_| format!("invalid --semantic-timeout: {value}"))?,
+        );
+    }
+    if let Some(value) = parsed.one("min-risk") {
+        cfg.min_risk = Some(
+            value
+                .parse()
+                .map_err(|_| format!("invalid --min-risk: {value}"))?,
+        );
+    }
+    Ok(())
+}
+
+fn cmd_semantic(args: &[String]) -> Result<i32, String> {
+    let subcommand = args.first().map(String::as_str).unwrap_or("check");
+    let rest = &args[1..];
+    let known = [
+        "config",
+        "json",
+        "semantic-provider",
+        "semantic-endpoint",
+        "semantic-model",
+        "embedding-endpoint",
+        "embedding-model",
+        "api-key-env",
+        "semantic-timeout",
+        "min-risk",
+        "help",
+    ];
+    let parsed = parse_args(rest, &known)?;
+    if parsed.has("help") {
+        print_help();
+        return Ok(0);
+    }
+    let target = parsed.positional.first().map(PathBuf::from);
+    let cfg_base = match parsed.one("config") {
+        Some(path) => config::load(Path::new(path))?,
+        None => match target.as_deref().and_then(config::discover) {
+            Some(path) => config::load(&path)?,
+            None => config::Config::default(),
+        },
+    };
+    let mut semantic_cfg = cfg_base.semantic;
+    apply_semantic_overrides(&mut semantic_cfg, &parsed)?;
+    let settings = semantic::Settings::from_config(&semantic_cfg)?;
+
+    match subcommand {
+        "check" => {
+            let Some(root) = target else {
+                return Err("usage: skillguard semantic check <path> [options]".into());
+            };
+            let verdicts = semantic::check_path(&root, &settings)?;
+            if parsed.has("json") {
+                println!(
+                    "{}",
+                    serde_json::to_string_pretty(&verdicts)
+                        .map_err(|error| format!("cannot serialize verdicts: {error}"))?
+                );
+            } else {
+                println!("SkillGuard {VERSION}  |  semantic check");
+                println!(
+                    "endpoint: {}  model: {}  provider: openai-compatible",
+                    settings.endpoint, settings.model
+                );
+                for verdict in verdicts {
+                    println!(
+                        "{}  risk={}  labels={}  {}",
+                        verdict.path,
+                        verdict.risk,
+                        if verdict.labels.is_empty() {
+                            "-".to_string()
+                        } else {
+                            verdict.labels.join(",")
+                        },
+                        verdict.reason
+                    );
+                }
+            }
+            Ok(0)
+        }
+        "embed" => {
+            let text = parsed.positional.join(" ");
+            if text.trim().is_empty() {
+                return Err("usage: skillguard semantic embed <text> [options]".into());
+            }
+            let value = semantic::embed_debug(&text, &semantic_cfg)?;
+            println!(
+                "{}",
+                serde_json::to_string_pretty(&value)
+                    .map_err(|error| format!("cannot serialize embedding: {error}"))?
+            );
+            Ok(0)
+        }
+        other => Err(format!("unknown semantic subcommand: {other}")),
+    }
+}
+
+fn runtime_options(parsed: &ParsedArgs) -> Result<runtime::RuntimeOptions, String> {
+    let policy = match parsed.one("policy") {
+        Some(path) => Some(guard::load_policy(Path::new(path))?),
+        None => None,
+    };
+    Ok(runtime::RuntimeOptions {
+        policy,
+        audit: parsed.one("audit").map(PathBuf::from),
+    })
+}
+
+fn cmd_admit(args: &[String]) -> Result<i32, String> {
+    let parsed = parse_args(args, &["policy", "audit", "help"])?;
+    if parsed.has("help") {
+        print_help();
+        return Ok(0);
+    }
+    let options = runtime_options(&parsed)?;
+    runtime::run_admit_stdin(&options)
+}
+
+fn cmd_gateway(args: &[String]) -> Result<i32, String> {
+    let parsed = parse_args(args, &["policy", "audit", "bind", "once", "help"])?;
+    if parsed.has("help") {
+        print_help();
+        return Ok(0);
+    }
+    let options = runtime_options(&parsed)?;
+    let bind = parsed.one("bind").unwrap_or("127.0.0.1:8787");
+    if !bind.starts_with("127.0.0.1:")
+        && !bind.starts_with("localhost:")
+        && !bind.starts_with("[::1]:")
+    {
+        return Err(
+            "gateway 默认只允许绑定本机回环地址；如需暴露到网络，请在前面加一层受控反向代理".into(),
+        );
+    }
+    runtime::run_gateway(bind, parsed.has("once"), &options)
 }
 
 fn scan_for_guard(root: &Path) -> Result<Vec<model::Finding>, String> {
@@ -541,6 +817,15 @@ fn cmd_scan(args: &[String]) -> Result<i32, String> {
         "baseline",
         "write-baseline",
         "audit",
+        "semantic",
+        "semantic-provider",
+        "semantic-endpoint",
+        "semantic-model",
+        "embedding-endpoint",
+        "embedding-model",
+        "api-key-env",
+        "semantic-timeout",
+        "min-risk",
         "help",
     ];
     let parsed = parse_args(args, &known)?;
@@ -564,7 +849,10 @@ fn cmd_scan(args: &[String]) -> Result<i32, String> {
     };
 
     let format = parsed.one("format").unwrap_or("text").to_ascii_lowercase();
-    if !matches!(format.as_str(), "text" | "json" | "sarif") {
+    if !matches!(
+        format.as_str(),
+        "text" | "json" | "sarif" | "github" | "review" | "explain"
+    ) {
         return Err(format!("invalid --format: {format}"));
     }
 
@@ -630,6 +918,84 @@ fn cmd_scan(args: &[String]) -> Result<i32, String> {
 
     let mut outcome = engine::scan(&root, &compiled, &opts)?;
 
+    let semantic_enabled = parsed.has("semantic") || cfg.semantic.enabled;
+    if semantic_enabled {
+        let mut semantic_cfg = cfg.semantic.clone();
+        if let Some(value) = parsed.one("semantic-provider") {
+            semantic_cfg.provider = Some(value.to_string());
+        }
+        if let Some(value) = parsed.one("semantic-endpoint") {
+            semantic_cfg.endpoint = Some(value.to_string());
+        }
+        if let Some(value) = parsed.one("semantic-model") {
+            semantic_cfg.model = Some(value.to_string());
+        }
+        if let Some(value) = parsed.one("embedding-endpoint") {
+            semantic_cfg.embedding_endpoint = Some(value.to_string());
+        }
+        if let Some(value) = parsed.one("embedding-model") {
+            semantic_cfg.embedding_model = Some(value.to_string());
+        }
+        if let Some(value) = parsed.one("api-key-env") {
+            semantic_cfg.api_key_env = Some(value.to_string());
+        }
+        if let Some(value) = parsed.one("semantic-timeout") {
+            semantic_cfg.timeout_secs = Some(
+                value
+                    .parse()
+                    .map_err(|_| format!("invalid --semantic-timeout: {value}"))?,
+            );
+        }
+        if let Some(value) = parsed.one("min-risk") {
+            semantic_cfg.min_risk = Some(
+                value
+                    .parse()
+                    .map_err(|_| format!("invalid --min-risk: {value}"))?,
+            );
+        }
+        let settings = semantic::Settings::from_config(&semantic_cfg)?;
+        let verdicts = semantic::check_path(&root, &settings)?;
+        for verdict in &verdicts {
+            if verdict.risk < settings.min_risk {
+                continue;
+            }
+            if let Some(cr) = compiled.iter().find(|item| item.rule.id == "SG-SEM-001") {
+                let severity = if verdict.risk >= 85 {
+                    Severity::Critical
+                } else if verdict.risk >= 70 {
+                    Severity::High
+                } else {
+                    Severity::Medium
+                };
+                outcome.findings.push(model::Finding {
+                    rule_id: cr.rule.id.clone(),
+                    title: cr.rule.title.clone(),
+                    severity,
+                    category: cr.rule.category.clone(),
+                    skill: verdict.skill.clone(),
+                    file: verdict.path.clone(),
+                    line: 1,
+                    column: 1,
+                    excerpt: verdict.labels.join(", "),
+                    message: format!(
+                        "{} (risk {}, model {})",
+                        verdict.reason, verdict.risk, verdict.model
+                    ),
+                    remediation: cr.rule.remediation.clone(),
+                    references: cr.rule.references.clone(),
+                });
+            }
+        }
+        outcome.semantic = verdicts;
+        outcome.findings.sort_by(|a, b| {
+            b.severity
+                .cmp(&a.severity)
+                .then(a.skill.cmp(&b.skill))
+                .then(a.file.cmp(&b.file))
+                .then(a.line.cmp(&b.line))
+        });
+    }
+
     if let Some(path) = parsed.one("write-baseline") {
         guard::write_baseline(Path::new(path), &outcome.findings)?;
     }
@@ -638,22 +1004,38 @@ fn cmd_scan(args: &[String]) -> Result<i32, String> {
         outcome.findings = guard::filter_baseline(outcome.findings, &baseline);
     }
 
-    let policy_path = parsed.one("policy").map(PathBuf::from).or_else(|| {
+    let mut policy_paths: Vec<PathBuf> = parsed
+        .all("policy")
+        .into_iter()
+        .map(PathBuf::from)
+        .collect();
+    if policy_paths.is_empty() {
         let local = root.join(".skillguard-policy.json");
         if local.is_file() {
-            Some(local)
-        } else {
-            None
+            policy_paths.push(local);
         }
-    });
+    }
+    if policy_paths.iter().any(|path| !path.is_file()) {
+        let missing = policy_paths
+            .iter()
+            .find(|path| !path.is_file())
+            .map(|path| path.display().to_string())
+            .unwrap_or_default();
+        return Err(format!("policy file not found: {missing}"));
+    }
     let threshold = opts.fail_on;
-    let policy_result = match &policy_path {
-        Some(path) => {
-            let policy = guard::load_policy(path)?;
-            Some(guard::evaluate(&outcome.findings, &policy, threshold))
-        }
-        None => None,
+    let merged_policy = if policy_paths.is_empty() {
+        None
+    } else {
+        let policies = policy_paths
+            .iter()
+            .map(|path| guard::load_policy(path))
+            .collect::<Result<Vec<_>, _>>()?;
+        Some(guard::merge_policies(&policies))
     };
+    let policy_result = merged_policy
+        .as_ref()
+        .map(|policy| guard::evaluate(&outcome.findings, policy, threshold));
 
     let color = report::use_color(parsed.has("no-color"));
     let summary = report::summary(&outcome);
@@ -691,9 +1073,17 @@ fn cmd_scan(args: &[String]) -> Result<i32, String> {
             } else {
                 guard::Decision::Allow
             });
-        let policy_hash = match &policy_path {
-            Some(path) => Some(guard::file_hash(path)?),
-            None => None,
+        let policy_hash = guard::policy_bundle_hash(&policy_paths)?;
+        let policy_label = if policy_paths.is_empty() {
+            None
+        } else {
+            Some(
+                policy_paths
+                    .iter()
+                    .map(|path| path.display().to_string())
+                    .collect::<Vec<_>>()
+                    .join(","),
+            )
         };
         let reasons = policy_result
             .as_ref()
@@ -705,10 +1095,7 @@ fn cmd_scan(args: &[String]) -> Result<i32, String> {
             decision,
             &outcome.findings,
             &reasons,
-            policy_path
-                .as_ref()
-                .map(|path| path.display().to_string())
-                .as_deref(),
+            policy_label.as_deref(),
             policy_hash.as_deref(),
             &guard::builtin_rules_hash(),
             None,
@@ -722,6 +1109,27 @@ fn cmd_scan(args: &[String]) -> Result<i32, String> {
             report::to_json(&outcome, VERSION, parsed.has("json-pretty"))
         ),
         "sarif" => println!("{}", report::to_sarif(&outcome, VERSION, &compiled)),
+        "github" => print!("{}", report::to_github(&outcome)),
+        "review" | "explain" => {
+            let decision = policy_result
+                .as_ref()
+                .map(|result| result.decision.as_str());
+            let empty = Vec::new();
+            let reasons = policy_result
+                .as_ref()
+                .map(|result| result.reasons.as_slice())
+                .unwrap_or(&empty);
+            report::print_review(
+                &outcome,
+                VERSION,
+                decision,
+                reasons,
+                format == "explain",
+                color,
+                parsed.has("quiet"),
+            );
+            return Ok(0);
+        }
         _ => {
             report::print_text(
                 &outcome,

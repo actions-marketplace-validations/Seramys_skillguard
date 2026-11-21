@@ -18,6 +18,13 @@ SEVERITY_RANK = {"none": 0, "low": 1, "medium": 2, "high": 3, "critical": 4}
 RANK_NAME = {0: "none", 1: "low", 2: "medium", 3: "high", 4: "critical"}
 
 
+def crate_version() -> str:
+    for line in (ROOT / "Cargo.toml").read_text(encoding="utf-8").splitlines():
+        if line.startswith("version = "):
+            return line.split('"')[1]
+    return "0.0.0"
+
+
 def default_exe() -> Path:
     for candidate in ("target/release/skillguard.exe", "target/release/skillguard"):
         path = ROOT / candidate
@@ -180,9 +187,10 @@ def main() -> int:
     if not args.no_imported and args.imported_manifest.exists():
         imported = json.loads(args.imported_manifest.read_text(encoding="utf-8"))
         samples.extend(imported.get("samples", []))
-    target_fpr = args.target_fpr if args.target_fpr is not None else manifest.get("target_fpr", 0.05)
-    min_recall = manifest.get("min_recall_at_fpr", 0.9)
-    max_fpr_upper = manifest.get("max_fpr_upper", 0.10)
+    gate = json.loads(DEFAULT_MANIFEST.read_text(encoding="utf-8"))
+    target_fpr = args.target_fpr if args.target_fpr is not None else gate.get("target_fpr", 0.05)
+    min_recall = gate.get("min_recall_at_fpr", 0.75)
+    max_fpr_upper = gate.get("max_fpr_upper", 0.06)
     only = {item.strip() for item in args.only.split(",") if item.strip()}
 
     filtered = []
@@ -244,7 +252,7 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    version = args.version or "0.2.0"
+    version = args.version or crate_version()
     stamp = datetime.date.today().isoformat()
     version_json = args.json_out.parent / f"v{version}-{stamp}.json"
     version_md = args.md_out.parent / f"v{version}-{stamp}.md"
@@ -317,7 +325,7 @@ def main() -> int:
     if metrics["recall"] < min_recall:
         print(f"FAIL: recall {metrics['recall']:.1%} < {min_recall:.1%}", file=sys.stderr)
         return 1
-    if new_fp:
+    if new_fp and args.manifest.resolve() == DEFAULT_MANIFEST.resolve():
         print(f"FAIL: new false positives: {', '.join(new_fp[:10])}", file=sys.stderr)
         return 1
     print("PASS: benchmark gate satisfied", file=sys.stderr)

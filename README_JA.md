@@ -11,7 +11,7 @@
 
 Skill をインストールする前に、SkillGuard を一度走らせてください。
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=flat-square)](LICENSE) [![Tests](https://img.shields.io/badge/tests-79%20passing-17A673?style=flat-square)](README_EN.md#verification) [![Rules](https://img.shields.io/badge/rules-49-5B6CFF?style=flat-square)](rules/core.json) [![SARIF 2.1.0](https://img.shields.io/badge/SARIF-2.1.0-8B7CF6?style=flat-square)](README_EN.md#output-formats)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=flat-square)](LICENSE) [![Tests](https://img.shields.io/badge/tests-100%20passing-17A673?style=flat-square)](README_EN.md#verification) [![Rules](https://img.shields.io/badge/rules-59-5B6CFF?style=flat-square)](rules/core.json) [![SARIF 2.1.0](https://img.shields.io/badge/SARIF-2.1.0-8B7CF6?style=flat-square)](README_EN.md#output-formats)
 
 [简体中文](README.md) · [English](README_EN.md) · [日本語](README_JA.md) · [한국어](README_KO.md)
 
@@ -82,7 +82,7 @@ cargo build --release
 
 ## インストール
 
-> **0.2.0 の現状**：npm / PyPI / GitHub Release の 0.2.0 は公開済みで、win32-x64 / linux-x64 / darwin-x64 / darwin-arm64 を含みます。Release v0.2.0 には 4 つのプラットフォームバイナリと SHA256SUMS があります。
+> **0.3.0 の現状**：npm / PyPI / GitHub Release の 0.3.0 は公開済みで、win32-x64 / linux-x64 / darwin-x64 / darwin-arm64 を含みます。Release v0.3.0 には 4 つのプラットフォームバイナリと SHA256SUMS があります。
 
 ### 1. 単一バイナリ（推奨）
 
@@ -97,7 +97,7 @@ bash scripts/build.sh     # dist/<platform>-<arch>/ にコピー
 公開済み（マルチプラットフォーム）：
 
 ```bash
-npx --yes seramys-skillguard@0.2.0 scan ./skills --fail-on high
+npx --yes seramys-skillguard@0.3.0 scan ./skills --fail-on high
 ```
 
 リポジトリ内での検証：
@@ -143,7 +143,7 @@ Node / Python は薄いランチャーで、同じ Rust エンジンと `rules/c
 | パッケージ衛生 | 3 | frontmatter 不足、exe/dll/so/msi、bat/cmd/ps1/vbs/hta/reg |
 | データアクセス | 2 | 環境変数の読み取り、一括エクスポート |
 | 組み合わせ | 5 | 機密読取+外部通信、注入+実行、env+通信、安心文言+registry、コンテナ+一括実行 |
-| **合計** | **49** | JSON 定義、外部ルールパック対応 |
+| **合計** | **59** | JSON 定義、外部ルールパック対応 |
 
 組み合わせルール（`SG-COMBO-001` / `SG-COMBO-002`）は、単一の文字列ではなく複数シグナルを同一 Skill 内で関連付けます。片方のシグナルを抑制すると、組み合わせリスクも消えます。
 
@@ -203,12 +203,12 @@ skillguard version
   <img src="docs/assets/screenshots/verification-en.png" width="980" alt="ローカル検証レポート">
 </p>
 
-環境：Windows 11 x64、SkillGuard 0.2.0、2026-11-20（npm/PyPI/GitHub Release 公開済み）。
+環境：Windows 11 x64、0.3.0、2026-11-21。npm / PyPI / GitHub Release はすべて 0.3.0 を公開済みです。
 
-- テスト：35 件成功（19 ユニット + 16 E2E）
+- テスト：100 件成功（47 ユニット + 53 統合）
 - Clippy：警告 0
-- 自己スキャン：PASS（low 4 件のみ）
-- SARIF：2.1.0、49 ルール、7 結果
+- 自己スキャン：PASS（high 0、medium 6、low 3）
+- SARIF：2.1.0、59 ルール、9 結果
 
 その他の数値と生ログは [English README](README_EN.md#verification) を参照してください。
 

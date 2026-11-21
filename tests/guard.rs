@@ -125,7 +125,7 @@ fn policy_exception_allows_high() {
         "active exception should allow\nstdout: {stdout}\nstderr: {stderr}"
     );
     assert!(
-        stderr.contains("policy: ALLOW") || stderr.contains("policy: WARN"),
+        stderr.contains("policy: ALLOW") || stderr.contains("policy: REVIEW"),
         "{stderr}"
     );
     let _ = fs::remove_dir_all(root);

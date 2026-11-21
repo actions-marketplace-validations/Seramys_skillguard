@@ -1,4 +1,6 @@
-# SkillGuard detection benchmark
+# SkillGuard detection benchmark (superseded)
+
+> This pre-P0 snapshot is kept for history. The current blind quality number is in `holdout-v3-blind.md` (77.8% recall / 3.0% FPR).
 
 - binary: `target\release\skillguard`
 - version: `0.2.0` / split: `holdout`

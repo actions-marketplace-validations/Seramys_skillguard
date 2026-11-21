@@ -1,0 +1,14 @@
+{
+  "profile": "team-admission",
+  "fail_on": "high",
+  "max_medium": 5,
+  "deny": ["SG-CRED-*", "SG-DL-*", "SG-INIT-001"],
+  "allow": [
+    {
+      "rule": "SG-NET-003",
+      "owner": "security-team",
+      "reason": "Documented and allow-listed vendor endpoint",
+      "expires": "2027-12-31"
+    }
+  ]
+}

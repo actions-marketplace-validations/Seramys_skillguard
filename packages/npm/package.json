@@ -1,6 +1,6 @@
 {
   "name": "seramys-skillguard",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Supply-chain security scanner for AI agent skills (Claude Code, Cursor, OpenClaw, Hermes)",
   "license": "MIT",
   "bin": {

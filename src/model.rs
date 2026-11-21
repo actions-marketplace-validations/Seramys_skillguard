@@ -64,6 +64,17 @@ pub struct Finding {
     pub references: Vec<String>,
 }
 
+#[derive(Debug, Clone, Serialize)]
+pub struct Capability {
+    pub skill: String,
+    pub kind: String,
+    pub target: String,
+    pub file: String,
+    pub line: usize,
+    pub declared: bool,
+    pub evidence: String,
+}
+
 #[derive(Debug, Default, Clone, Serialize)]
 pub struct Summary {
     pub skills: usize,

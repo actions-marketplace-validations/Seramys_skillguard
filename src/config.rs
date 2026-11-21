@@ -18,6 +18,8 @@ pub struct Config {
     pub exclude: Vec<String>,
     #[serde(default)]
     pub rules_dir: Option<String>,
+    #[serde(default)]
+    pub semantic: crate::semantic::SemanticConfig,
 }
 
 pub fn load(path: &Path) -> Result<Config, String> {

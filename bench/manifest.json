@@ -1,10 +1,10 @@
 {
   "version": 1,
   "threshold": "high",
-  "target_fpr": 0.05,
-  "min_recall_at_fpr": 0.64,
+  "target_fpr": 0.03,
+  "min_recall_at_fpr": 0.75,
   "target_recall_at_fpr": 0.9,
-  "max_fpr_upper": 0.1,
+  "max_fpr_upper": 0.06,
   "samples": [
     { "id": "tob-csv-summarizer", "label": "malicious", "path": "bench/samples/tob/skills/csv-summarizer", "tags": ["tob", "data-access", "padding"] },
     { "id": "tob-context-loader", "label": "malicious", "path": "bench/samples/tob/skills/context-loader", "tags": ["tob", "container"] },

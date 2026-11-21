@@ -51,6 +51,6 @@ jobs:
       - run: cargo build --release
       - run: python bench/fetch_samples.py
       - run: python bench/make_corpus.py
-      # Synthetic public smoke gate. The extended 64.9% holdout requires
+      # Synthetic public smoke gate. Frozen holdout quality runs require
       # authorized real samples that are ignored in this repository.
       - run: python bench/run.py --exe target/release/skillguard --split all --no-imported

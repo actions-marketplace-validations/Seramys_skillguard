@@ -11,7 +11,7 @@
 
 Skill을 설치하기 전에 SkillGuard를 먼저 실행하세요.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=flat-square)](LICENSE) [![Tests](https://img.shields.io/badge/tests-79%20passing-17A673?style=flat-square)](README_EN.md#verification) [![Rules](https://img.shields.io/badge/rules-49-5B6CFF?style=flat-square)](rules/core.json) [![SARIF 2.1.0](https://img.shields.io/badge/SARIF-2.1.0-8B7CF6?style=flat-square)](README_EN.md#output-formats)
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow?style=flat-square)](LICENSE) [![Tests](https://img.shields.io/badge/tests-100%20passing-17A673?style=flat-square)](README_EN.md#verification) [![Rules](https://img.shields.io/badge/rules-59-5B6CFF?style=flat-square)](rules/core.json) [![SARIF 2.1.0](https://img.shields.io/badge/SARIF-2.1.0-8B7CF6?style=flat-square)](README_EN.md#output-formats)
 
 [简体中文](README.md) · [English](README_EN.md) · [日本語](README_JA.md) · [한국어](README_KO.md)
 
@@ -82,7 +82,7 @@ cargo build --release
 
 ## 설치
 
-> **0.2.0 현재 상태**: npm / PyPI / GitHub Release 0.2.0이 공개되었으며 win32-x64, linux-x64, darwin-x64, darwin-arm64를 포함합니다. Release v0.2.0에는 4개 플랫폼 바이너리와 SHA256SUMS가 있습니다.
+> **0.3.0 현재 상태**: npm / PyPI / GitHub Release 0.3.0이 공개되었으며 win32-x64, linux-x64, darwin-x64, darwin-arm64를 포함합니다. Release v0.3.0에는 4개 플랫폼 바이너리와 SHA256SUMS가 있습니다.
 
 ### 1. 단일 바이너리 (권장)
 
@@ -97,7 +97,7 @@ bash scripts/build.sh     # dist/<platform>-<arch>/ 에 복사
 공개됨 (멀티 플랫폼):
 
 ```bash
-npx --yes seramys-skillguard@0.2.0 scan ./skills --fail-on high
+npx --yes seramys-skillguard@0.3.0 scan ./skills --fail-on high
 ```
 
 저장소 내 검증:
@@ -143,7 +143,7 @@ Node / Python 런처는 얇은 래퍼이며, 동일한 Rust 엔진과 `rules/cor
 | 패키지 위생 | 3 | frontmatter 누락, exe/dll/so/msi, bat/cmd/ps1/vbs/hta/reg |
 | 데이터 접근 | 2 | 환경 변수 읽기, 일괄 내보내기 |
 | 조합 | 5 | 민감 읽기+외부 통신, 주입+원격 실행, env+통신, 안심 문구+registry, 컨테이너+일괄 실행 |
-| **합계** | **49** | JSON 정의, 외부 규칙 팩 지원 |
+| **합계** | **59** | JSON 정의, 외부 규칙 팩 지원 |
 
 조합 규칙(`SG-COMBO-001` / `SG-COMBO-002`)은 단일 문자열이 아니라 동일 Skill 내의 여러 신호를 연관시킵니다. 한 신호를 억제하면 조합 위험도 사라집니다.
 
@@ -203,12 +203,12 @@ skillguard version
   <img src="docs/assets/screenshots/verification-en.png" width="980" alt="로컬 검증 보고서">
 </p>
 
-환경: Windows 11 x64, SkillGuard 0.2.0, 2026-11-20 (npm/PyPI/GitHub Release 공개됨).
+환경: Windows 11 x64, 0.3.0, 2026-11-21. npm / PyPI / GitHub Release 모두 0.3.0을 공개했습니다.
 
-- 테스트: 35개 통과 (19 유닛 + 16 E2E)
+- 테스트: 100개 통과 (47 유닛 + 53 통합)
 - Clippy: 경고 0
-- 자체 스캔: PASS (low 4건만)
-- SARIF: 2.1.0, 49개 규칙, 7개 결과
+- 자체 스캔: PASS (high 0, medium 6, low 3)
+- SARIF: 2.1.0, 59개 규칙, 9개 결과
 
 자세한 수치와 원본 로그는 [English README](README_EN.md#verification)를 참고하세요.
 

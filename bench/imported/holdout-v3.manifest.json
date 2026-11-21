@@ -1,0 +1,6609 @@
+{
+  "version": 1,
+  "frozen_at": "2026-11-21",
+  "split": "holdout-v3",
+  "samples": [
+    {
+      "id": "gen-malicious-pi-000",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-000",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-003",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-003",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-006",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-006",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-009",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-009",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-012",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-012",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-015",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-015",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-018",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-018",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-021",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-021",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-024",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-024",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-malicious-ole-027",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ole-027",
+      "tags": [
+        "generated",
+        "ole"
+      ]
+    },
+    {
+      "id": "gen-malicious-ssh-030",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ssh-030",
+      "tags": [
+        "generated",
+        "ssh"
+      ]
+    },
+    {
+      "id": "gen-malicious-hidden-033",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/hidden-033",
+      "tags": [
+        "generated",
+        "hidden"
+      ]
+    },
+    {
+      "id": "gen-malicious-padding-036",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/padding-036",
+      "tags": [
+        "generated",
+        "padding"
+      ]
+    },
+    {
+      "id": "gen-malicious-pycdanger-039",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pycdanger-039",
+      "tags": [
+        "generated",
+        "pycdanger"
+      ]
+    },
+    {
+      "id": "gen-malicious-pi-042",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-042",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-045",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-045",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-048",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-048",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-051",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-051",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-054",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-054",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-057",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-057",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-060",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-060",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-063",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-063",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-066",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-066",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-malicious-ole-069",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ole-069",
+      "tags": [
+        "generated",
+        "ole"
+      ]
+    },
+    {
+      "id": "gen-malicious-ssh-072",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ssh-072",
+      "tags": [
+        "generated",
+        "ssh"
+      ]
+    },
+    {
+      "id": "gen-malicious-hidden-075",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/hidden-075",
+      "tags": [
+        "generated",
+        "hidden"
+      ]
+    },
+    {
+      "id": "gen-malicious-padding-078",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/padding-078",
+      "tags": [
+        "generated",
+        "padding"
+      ]
+    },
+    {
+      "id": "gen-malicious-pycdanger-081",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pycdanger-081",
+      "tags": [
+        "generated",
+        "pycdanger"
+      ]
+    },
+    {
+      "id": "gen-malicious-pi-084",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-084",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-087",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-087",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-090",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-090",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-093",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-093",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-096",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-096",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-099",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-099",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-102",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-102",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-105",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-105",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-108",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-108",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-malicious-ole-111",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ole-111",
+      "tags": [
+        "generated",
+        "ole"
+      ]
+    },
+    {
+      "id": "gen-malicious-ssh-114",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ssh-114",
+      "tags": [
+        "generated",
+        "ssh"
+      ]
+    },
+    {
+      "id": "gen-malicious-hidden-117",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/hidden-117",
+      "tags": [
+        "generated",
+        "hidden"
+      ]
+    },
+    {
+      "id": "gen-malicious-padding-120",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/padding-120",
+      "tags": [
+        "generated",
+        "padding"
+      ]
+    },
+    {
+      "id": "gen-malicious-pycdanger-123",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pycdanger-123",
+      "tags": [
+        "generated",
+        "pycdanger"
+      ]
+    },
+    {
+      "id": "gen-malicious-pi-126",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-126",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-129",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-129",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-132",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-132",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-135",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-135",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-138",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-138",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-141",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-141",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-144",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-144",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-147",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-147",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-150",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-150",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-malicious-ole-153",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ole-153",
+      "tags": [
+        "generated",
+        "ole"
+      ]
+    },
+    {
+      "id": "gen-malicious-ssh-156",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ssh-156",
+      "tags": [
+        "generated",
+        "ssh"
+      ]
+    },
+    {
+      "id": "gen-malicious-hidden-159",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/hidden-159",
+      "tags": [
+        "generated",
+        "hidden"
+      ]
+    },
+    {
+      "id": "gen-malicious-padding-162",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/padding-162",
+      "tags": [
+        "generated",
+        "padding"
+      ]
+    },
+    {
+      "id": "gen-malicious-pycdanger-165",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pycdanger-165",
+      "tags": [
+        "generated",
+        "pycdanger"
+      ]
+    },
+    {
+      "id": "gen-malicious-pi-168",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-168",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-171",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-171",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-174",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-174",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-177",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-177",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-180",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-180",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-183",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-183",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-186",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-186",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-189",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-189",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-192",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-192",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-malicious-ole-195",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ole-195",
+      "tags": [
+        "generated",
+        "ole"
+      ]
+    },
+    {
+      "id": "gen-malicious-ssh-198",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ssh-198",
+      "tags": [
+        "generated",
+        "ssh"
+      ]
+    },
+    {
+      "id": "gen-malicious-hidden-201",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/hidden-201",
+      "tags": [
+        "generated",
+        "hidden"
+      ]
+    },
+    {
+      "id": "gen-malicious-padding-204",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/padding-204",
+      "tags": [
+        "generated",
+        "padding"
+      ]
+    },
+    {
+      "id": "gen-malicious-pycdanger-207",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pycdanger-207",
+      "tags": [
+        "generated",
+        "pycdanger"
+      ]
+    },
+    {
+      "id": "gen-malicious-pi-210",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-210",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-213",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-213",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-216",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-216",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-219",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-219",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-222",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-222",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-225",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-225",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-228",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-228",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-231",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-231",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-234",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-234",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-malicious-ole-237",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ole-237",
+      "tags": [
+        "generated",
+        "ole"
+      ]
+    },
+    {
+      "id": "gen-malicious-ssh-240",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ssh-240",
+      "tags": [
+        "generated",
+        "ssh"
+      ]
+    },
+    {
+      "id": "gen-malicious-hidden-243",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/hidden-243",
+      "tags": [
+        "generated",
+        "hidden"
+      ]
+    },
+    {
+      "id": "gen-malicious-padding-246",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/padding-246",
+      "tags": [
+        "generated",
+        "padding"
+      ]
+    },
+    {
+      "id": "gen-malicious-pycdanger-249",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pycdanger-249",
+      "tags": [
+        "generated",
+        "pycdanger"
+      ]
+    },
+    {
+      "id": "gen-malicious-pi-252",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-252",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-255",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-255",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-258",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-258",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-261",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-261",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-264",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-264",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-267",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-267",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-270",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-270",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-273",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-273",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-276",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-276",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-malicious-ole-279",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ole-279",
+      "tags": [
+        "generated",
+        "ole"
+      ]
+    },
+    {
+      "id": "gen-malicious-ssh-282",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/ssh-282",
+      "tags": [
+        "generated",
+        "ssh"
+      ]
+    },
+    {
+      "id": "gen-malicious-hidden-285",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/hidden-285",
+      "tags": [
+        "generated",
+        "hidden"
+      ]
+    },
+    {
+      "id": "gen-malicious-padding-288",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/padding-288",
+      "tags": [
+        "generated",
+        "padding"
+      ]
+    },
+    {
+      "id": "gen-malicious-pycdanger-291",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pycdanger-291",
+      "tags": [
+        "generated",
+        "pycdanger"
+      ]
+    },
+    {
+      "id": "gen-malicious-pi-294",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pi-294",
+      "tags": [
+        "generated",
+        "pi"
+      ]
+    },
+    {
+      "id": "gen-malicious-curl-297",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/curl-297",
+      "tags": [
+        "generated",
+        "curl"
+      ]
+    },
+    {
+      "id": "gen-malicious-registry-300",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/registry-300",
+      "tags": [
+        "generated",
+        "registry"
+      ]
+    },
+    {
+      "id": "gen-malicious-docx-303",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docx-303",
+      "tags": [
+        "generated",
+        "docx"
+      ]
+    },
+    {
+      "id": "gen-malicious-docxmacro-306",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/docxmacro-306",
+      "tags": [
+        "generated",
+        "docxmacro"
+      ]
+    },
+    {
+      "id": "gen-malicious-env-309",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/env-309",
+      "tags": [
+        "generated",
+        "env"
+      ]
+    },
+    {
+      "id": "gen-malicious-b64-312",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/b64-312",
+      "tags": [
+        "generated",
+        "b64"
+      ]
+    },
+    {
+      "id": "gen-malicious-cron-315",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/cron-315",
+      "tags": [
+        "generated",
+        "cron"
+      ]
+    },
+    {
+      "id": "gen-malicious-pyc-318",
+      "label": "malicious",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/malicious/pyc-318",
+      "tags": [
+        "generated",
+        "pyc"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-000",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-000",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-003",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-003",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-006",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-006",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-009",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-009",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-012",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-012",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-015",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-015",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-018",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-018",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-021",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-021",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-024",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-024",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-027",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-027",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-030",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-030",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-033",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-033",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-036",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-036",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-039",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-039",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-042",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-042",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-045",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-045",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-048",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-048",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-051",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-051",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-054",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-054",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-057",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-057",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-060",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-060",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-063",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-063",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-066",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-066",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-069",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-069",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-072",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-072",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-075",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-075",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-078",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-078",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-081",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-081",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-084",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-084",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-087",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-087",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-090",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-090",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-093",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-093",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-096",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-096",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-099",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-099",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-102",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-102",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-105",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-105",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-108",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-108",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-111",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-111",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-114",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-114",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-117",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-117",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-120",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-120",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-123",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-123",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-126",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-126",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-129",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-129",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-132",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-132",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-135",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-135",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-138",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-138",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-141",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-141",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-144",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-144",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-147",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-147",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-150",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-150",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-153",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-153",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-156",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-156",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-159",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-159",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-162",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-162",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-165",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-165",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-168",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-168",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-171",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-171",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-174",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-174",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-177",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-177",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-180",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-180",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-183",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-183",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-186",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-186",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-189",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-189",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-192",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-192",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-195",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-195",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-198",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-198",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-201",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-201",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-204",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-204",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-207",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-207",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-210",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-210",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-213",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-213",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-216",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-216",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-219",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-219",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-222",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-222",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-225",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-225",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-228",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-228",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-231",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-231",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-234",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-234",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-237",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-237",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-240",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-240",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-243",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-243",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-246",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-246",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-249",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-249",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-252",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-252",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-255",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-255",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-258",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-258",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-261",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-261",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-264",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-264",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-267",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-267",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-270",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-270",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-273",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-273",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-276",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-276",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-279",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-279",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-282",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-282",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-285",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-285",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-288",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-288",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-291",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-291",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-294",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-294",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-297",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-297",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-300",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-300",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-303",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-303",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-306",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-306",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-309",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-309",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-312",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-312",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-315",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-315",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-318",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-318",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-321",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-321",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-324",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-324",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-327",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-327",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-330",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-330",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-333",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-333",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-336",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-336",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-339",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-339",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-342",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-342",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-345",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-345",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-348",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-348",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-351",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-351",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-354",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-354",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-357",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-357",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-360",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-360",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-363",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-363",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-366",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-366",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-369",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-369",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-372",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-372",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-375",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-375",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-378",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-378",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-381",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-381",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-384",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-384",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-387",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-387",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-390",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-390",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-393",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-393",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-396",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-396",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-399",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-399",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-402",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-402",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-405",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-405",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-408",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-408",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-411",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-411",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-414",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-414",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-417",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-417",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-420",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-420",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-423",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-423",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-426",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-426",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-429",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-429",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-432",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-432",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-435",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-435",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-438",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-438",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-441",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-441",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-444",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-444",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-447",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-447",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-450",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-450",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-453",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-453",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-456",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-456",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-459",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-459",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-462",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-462",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-465",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-465",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-468",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-468",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-471",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-471",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-474",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-474",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-477",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-477",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-480",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-480",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-483",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-483",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-486",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-486",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-489",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-489",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-492",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-492",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-495",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-495",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-498",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-498",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-501",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-501",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "gen-benign-csv-504",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/csv-504",
+      "tags": [
+        "generated",
+        "csv"
+      ]
+    },
+    {
+      "id": "gen-benign-shell-507",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/shell-507",
+      "tags": [
+        "generated",
+        "shell"
+      ]
+    },
+    {
+      "id": "gen-benign-npm-510",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/npm-510",
+      "tags": [
+        "generated",
+        "npm"
+      ]
+    },
+    {
+      "id": "gen-benign-report-513",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/report-513",
+      "tags": [
+        "generated",
+        "report"
+      ]
+    },
+    {
+      "id": "gen-benign-find-test-516",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/find-test-516",
+      "tags": [
+        "generated",
+        "find-test"
+      ]
+    },
+    {
+      "id": "gen-benign-mcp-url-519",
+      "label": "benign",
+      "split": "holdout-v3",
+      "path": "bench/samples/generated/dev/benign/mcp-url-519",
+      "tags": [
+        "generated",
+        "mcp-url"
+      ]
+    },
+    {
+      "id": "clawhub-ai-third-space",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ai-third-space",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/ai-third-space",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-bilei-team",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/bilei-team",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/bilei-team",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-global-capital-flow-marx",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/global-capital-flow-marx",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/global-capital-flow-marx",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-hotel-rate-watcher",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/hotel-rate-watcher",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/hotel-rate-watcher",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-javdb-cli",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/javdb-cli",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/javdb-cli",
+      "review_note": "CLI wrapper; credential keyword from authenticated API wording"
+    },
+    {
+      "id": "clawhub-ofw",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ofw",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/ofw",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-taobao-listing-copy",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/taobao-listing-copy",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/taobao-listing-copy",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-tiktok-user-insight",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/tiktok-user-insight",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/tiktok-user-insight",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-toutiao-to-text",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/toutiao-to-text",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "security_status": "clean",
+      "license": "MIT-0",
+      "source_url": "https://clawhub.ai/skills/toutiao-to-text",
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "cisco-malicious-mcp-atlassian-cve-2026-27825",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "cisco_test_skills",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/cisco/dev/malicious/mcp-atlassian-cve-2026-27825",
+      "tags": [
+        "real",
+        "cisco",
+        "malicious"
+      ]
+    },
+    {
+      "id": "cisco-malicious-mcpwn-cve-2026-33032",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "cisco_test_skills",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/cisco/dev/malicious/mcpwn-cve-2026-33032",
+      "tags": [
+        "real",
+        "cisco",
+        "malicious"
+      ]
+    },
+    {
+      "id": "cisco-malicious-prompt-injection",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "cisco_test_skills",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/cisco/dev/malicious/prompt-injection",
+      "tags": [
+        "real",
+        "cisco",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000010",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000010",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000013",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000013",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000017",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000017",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000020",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000020",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000023",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000023",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000026",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000026",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000031",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000031",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000034",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000034",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000035",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000035",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000036",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000036",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000037",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000037",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000041",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000041",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000042",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000042",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000047",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000047",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000051",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000051",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000052",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000052",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000057",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000057",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000060",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000060",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000065",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000065",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000066",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000066",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000067",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000067",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000070",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000070",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000072",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000072",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000074",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000074",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000079",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000079",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000080",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000080",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000086",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000086",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000087",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000087",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000090",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000090",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000093",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000093",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000094",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000094",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000099",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000099",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000101",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000101",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000104",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000104",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000105",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000105",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000106",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000106",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000113",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000113",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000119",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000119",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000120",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000120",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000124",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000124",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000125",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000125",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000128",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000128",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000130",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000130",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000131",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000131",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000139",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000139",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000141",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000141",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000144",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000144",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000149",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000149",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000150",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000150",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000151",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000151",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000153",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000153",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000155",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000155",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000156",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000156",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000158",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000158",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000162",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000162",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000163",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000163",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000164",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000164",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000169",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000169",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000170",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000170",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000171",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000171",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000174",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000174",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000175",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000175",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000178",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000178",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000183",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000183",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000184",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000184",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000187",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000187",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000188",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000188",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000190",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000190",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000193",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000193",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000194",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000194",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000195",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000195",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000201",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000201",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000203",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000203",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000212",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000212",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000215",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000215",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000218",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000218",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000222",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000222",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000225",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000225",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000228",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000228",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000232",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000232",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000237",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000237",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000238",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000238",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000245",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000245",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000247",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000247",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000248",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000248",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000250",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000250",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000251",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000251",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000252",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000252",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000253",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000253",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000256",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000256",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000261",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000261",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000267",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000267",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000268",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000268",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000272",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000272",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000273",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000273",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000275",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000275",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000279",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000279",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000287",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000287",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000291",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000291",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000297",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000297",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000299",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000299",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "msb-malicious-dev-ASB04_000300",
+      "label": "malicious",
+      "label_quality": "curated",
+      "label_source": "malicious_skill_bench",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/msb/dev/malicious/ASB04_000300",
+      "tags": [
+        "real",
+        "msb",
+        "malicious"
+      ]
+    },
+    {
+      "id": "clawhub-a2a-exposed",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/a2a-exposed",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "A2A agent messaging tool; credential keyword from pairing wording"
+    },
+    {
+      "id": "clawhub-agent-roundtable",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/agent-roundtable",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-deep-research",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-deep-research",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-enterprise-panorama",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-enterprise-panorama",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-fact-check",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-fact-check",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-hotspot-tracker",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-hotspot-tracker",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-legal-practice-cases",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-legal-practice-cases",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-litigation-lawyer-assistant",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-litigation-lawyer-assistant",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-personal-legal-assistant",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-personal-legal-assistant",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-cue-unwind-pressure-line",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/cue-unwind-pressure-line",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-diagram-generator",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/diagram-generator",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-easyeda-agent",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/easyeda-agent",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-calcom",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-calcom",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-innerwarden-security",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/innerwarden-security",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "security guard product; install script matches pipe-to-shell rule but is legitimate installer"
+    },
+    {
+      "id": "clawhub-knowledge-precipitation",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/knowledge-precipitation",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-mrscraper",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/mrscraper",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-okf-markdown",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/okf-markdown",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-top-ads",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/top-ads",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-umbrella-insurance-compare-and-purchase",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/umbrella-insurance-compare-and-purchase",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-vedetta-skill",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/vedetta-skill",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xiaohongshu-video-studio",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xiaohongshu-video-studio",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xrowgmbh-ci-tools-pipeline",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xrowgmbh-ci-tools-pipeline",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xrowgmbh-gitlab-agent-profile",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xrowgmbh-gitlab-agent-profile",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xrowgmbh-gitlab-hackathon",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xrowgmbh-gitlab-hackathon",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xrowgmbh-gitlab-meeting-assistant",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xrowgmbh-gitlab-meeting-assistant",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "GitLab issue assistant; credential keyword from sanitized issue wording"
+    },
+    {
+      "id": "clawhub-youtube-deep-dive",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/youtube-deep-dive",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-litter-box-usage-monitor-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-litter-box-usage-monitor-analysis",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-jiesuan",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/jiesuan",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-agent-coach",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/agent-coach",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-agent-directory-listing",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/agent-directory-listing",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-agent-ready-check",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/agent-ready-check",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-ai-advisor-lite",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ai-advisor-lite",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-ai-audiobook-narration",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ai-audiobook-narration",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-ai-era-career-planner",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ai-era-career-planner",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-ai-music-video-clip-maker",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ai-music-video-clip-maker",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-algorover-research",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/algorover-research",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-beatra-ai-image-studio",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/beatra-ai-image-studio",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-candor-finance",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/candor-finance",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-career-planner-china",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/career-planner-china",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-clay-to-cargo",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/clay-to-cargo",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-codethrift",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/codethrift",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-company-enrichment",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/company-enrichment",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-desktop-pilot",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/desktop-pilot",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-douyin-cover-maker",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/douyin-cover-maker",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-douyin-ugc-ad-creator",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/douyin-ugc-ad-creator",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-e2e",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/e2e",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-ecommerce-detail-module-studio",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ecommerce-detail-module-studio",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-exa-search",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/exa-search",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-excalidraw-diagrams",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/excalidraw-diagrams",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-find-agent",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/find-agent",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-founder-ip-avatar-studio",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/founder-ip-avatar-studio",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-gdrive-nextcloud-migration",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/gdrive-nextcloud-migration",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-elevenlabs",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-elevenlabs",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-exa",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-exa",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-hubspot",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-hubspot",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-label-studio",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-label-studio",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-polar",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-polar",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-render-api",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-render-api",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-skyvern",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-skyvern",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-supabase-management",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-supabase-management",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-weave",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-weave",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-go-xai",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/go-xai",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-heyreach-outreach",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/heyreach-outreach",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-htmlhoster-upload",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/htmlhoster-upload",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-huawei-cloud-find-skills",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/huawei-cloud-find-skills",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-ihateposting",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/ihateposting",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-indie-game-ost-pack",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/indie-game-ost-pack",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-insurance-advisor-china",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/insurance-advisor-china",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-jahids-memory-manager",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/jahids-memory-manager",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-jahids-mission-planner",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/jahids-mission-planner",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-klingai",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/klingai",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-launch-check",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/launch-check",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-md-to-medium",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/md-to-medium",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-mining-contract-generator-lite",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/mining-contract-generator-lite",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-novel-promo-video-maker",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/novel-promo-video-maker",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-open-x-sys-zh-cn",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/open-x-sys-zh-cn",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-postemi-writing",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/postemi-writing",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-qubrics-cli",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/qubrics-cli",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-qubrics-getting-started",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/qubrics-getting-started",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-qubrics-mailbox-agent",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/qubrics-mailbox-agent",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-short-drama-voice-pack",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/short-drama-voice-pack",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-short-video-bgm-studio",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/short-video-bgm-studio",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-siebly-crypto-exchange-api",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/siebly-crypto-exchange-api",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "crypto exchange SDK; sensitive capability but legitimate dev library"
+    },
+    {
+      "id": "clawhub-simplified-to-traditional",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/simplified-to-traditional",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-skill-import-harvest",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/skill-import-harvest",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-skill-maintainer",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/skill-maintainer",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-skill-md-quick-security-check",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/skill-md-quick-security-check",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-skylight-mcp",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/skylight-mcp",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-aquarium-plant-health-monitor-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-aquarium-plant-health-monitor-analysis",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-ear-health-snapshot-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-ear-health-snapshot-analysis",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-emotion-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-emotion-analysis",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-pet-body-health-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-pet-body-health-analysis",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-pet-detection-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-pet-detection-analysis",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-rose-pest-disease-detection-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-rose-pest-disease-detection-analysis",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-snapmaker-u1-skill",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/snapmaker-u1-skill",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-social-data",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/social-data",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-sogni-creative-agent-skill",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/sogni-creative-agent-skill",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-speakai",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/speakai",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-suno-lyrics-to-song",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/suno-lyrics-to-song",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-taskfuel",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/taskfuel",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "paid tool-calling marketplace; install snippets only"
+    },
+    {
+      "id": "clawhub-tiktok-data",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/tiktok-data",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-tiktok-record-organizer",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/tiktok-record-organizer",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-verify-email-list",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/verify-email-list",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-virag-flowers",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/virag-flowers",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-viral-video-teardown-remake",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/viral-video-teardown-remake",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-voiceover-narration-studio",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/voiceover-narration-studio",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-warapp-api",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/warapp-api",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-waterfall-enrichment",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/waterfall-enrichment",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-web-scraping",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/web-scraping",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wechat-article-visual-pack",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wechat-article-visual-pack",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wechat-channels-cover-maker",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wechat-channels-cover-maker",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wechat-channels-product-video",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wechat-channels-product-video",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wechat-cover-maker",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wechat-cover-maker",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-whetstone",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/whetstone",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wirecat-tg",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wirecat-tg",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xiaohongshu-note-research",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xiaohongshu-note-research",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xiaohongshu-search-api",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xiaohongshu-search-api",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xps-plex",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xps-plex",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xungu-huangli",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xungu-huangli",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-zhongcao-food-note-maker",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/zhongcao-food-note-maker",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-zhongcao-note-copywriter",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/zhongcao-note-copywriter",
+      "tags": [
+        "benign",
+        "clawhub",
+        "real",
+        "reviewed"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-doca-bare-metal-deployment",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/doca-bare-metal-deployment",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-doca-dma",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/doca-dma",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wirecat-wordpress",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wirecat-wordpress",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-grooming-effect-assessment-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-grooming-effect-assessment-analysis",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wordpress-content-sync",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wordpress-content-sync",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-huawei-cloud-cloudrobo-data-pipeline",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/huawei-cloud-cloudrobo-data-pipeline",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-xianzong-travel-aipay",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/xianzong-travel-aipay",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-apiguru-amazon-data",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/apiguru-amazon-data",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-denote-top-ads",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/denote-top-ads",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-pb-runner",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/pb-runner",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-greenhouse-climate-plant-feedback-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-greenhouse-climate-plant-feedback-analysis",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-wirecat-ydisk",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/wirecat-ydisk",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-douyin-search-api",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/douyin-search-api",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-uninstaller",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/uninstaller",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-smyx-child-window-climbing-detection-analysis",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/smyx-child-window-climbing-detection-analysis",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-controlclaw-firewall",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/controlclaw-firewall",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-model-routing-preset-builder",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/model-routing-preset-builder",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-chartatelier",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/chartatelier",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-pain-opportunity-radar",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/pain-opportunity-radar",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-mp3-to-m4b",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/mp3-to-m4b",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-kuaishou-performance-review",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/kuaishou-performance-review",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-concrete-contractors-estimator",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/concrete-contractors-estimator",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-gateway-config-audit",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/gateway-config-audit",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-openviking-memory-triage",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/openviking-memory-triage",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-workspace-root-selection",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/workspace-root-selection",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-aigc-web-push",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/aigc-web-push",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-web-development",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/web-development",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-douyin-keyword-surge",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/douyin-keyword-surge",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-hookbird-autopilot",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/hookbird-autopilot",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    },
+    {
+      "id": "clawhub-osmo-call-screening",
+      "label": "benign",
+      "label_quality": "reviewed",
+      "label_source": "clawhub_security+agent_review",
+      "split": "holdout-v3",
+      "path": "bench/samples/real/clawhub/dev/benign/osmo-call-screening",
+      "tags": [
+        "clawhub",
+        "real",
+        "reviewed",
+        "detail"
+      ],
+      "review_note": "manual review of SKILL.md: no exfiltration, persistence, or covert execution indicators"
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 npm launcher for [SkillGuard](https://github.com/Seramys/skillguard), a supply-chain
 security scanner for AI agent skills.
 
-> 0.2.0 bundles win32-x64, linux-x64, darwin-x64, and darwin-arm64. The launcher picks the binary for the current platform.
+> 0.3.0 bundles win32-x64, linux-x64, darwin-x64, and darwin-arm64. The launcher picks the binary for the current platform.
 
 ```bash
 npx seramys-skillguard scan ./skills --fail-on high

@@ -26,13 +26,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Scan clean fixture
-        uses: Seramys/skillguard@v0.2.0
+        uses: Seramys/skillguard@v0.3.0
         with:
           path: tests/fixtures/clean-skill
           format: text
           fail-on: high
       - name: Scan risky fixture without failing the job
-        uses: Seramys/skillguard@v0.2.0
+        uses: Seramys/skillguard@v0.3.0
         with:
           path: tests/fixtures/exfil-skill
           format: text

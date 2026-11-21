@@ -23,5 +23,5 @@
   <text x="474" y="284" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif" font-size="30" fill="#A8B4D1" letter-spacing="0.4">AI Agent Skill Supply-Chain Security Scanner</text>
   <line x1="474" y1="326" x2="1118" y2="326" stroke="#2A3555" stroke-width="2"/>
   <rect x="474" y="354" width="500" height="52" rx="26" fill="#1A2544"/>
-  <text x="502" y="388" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif" font-size="22" fill="#B9AEFF">49 rules  ·  single binary  ·  SARIF 2.1.0</text>
+  <text x="502" y="388" font-family="Inter, 'Segoe UI', 'Microsoft YaHei', sans-serif" font-size="22" fill="#B9AEFF">59 rules  ·  single binary  ·  SARIF 2.1.0</text>
 </svg>
